@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  overflow: hidden;
+}
+
+header {
+  background-color: #001f3f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+@keyframes colorAnimation {
+  0% {
+    background-color: #001f3f;
+  }
+  50% {
+    background-color: #ff4081;
+  }
+  100% {
+    background-color: #001f3f;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  margin: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #001f3f;
+}
+
+#dataset-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#dataset-table th,
+#dataset-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+#dataset-table th {
+  background-color: #001f3f;
+  font-weight: bold;
+  color: #fff;
+}
+
+#dataset-table td {
+  color: #333;
+}
+
+#input-file {
+  margin-top: 20px;
+}
+
+#input-file::-webkit-file-upload-button {
+  background-color: #001f3f;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#input-file::-webkit-file-upload-button:hover {
+  background-color: #152d57;
+}
+
+#input-file::-webkit-file-upload-button:focus {
+  outline: none;
+}
+
+#input-file::-webkit-file-upload-button:active {
+  background-color: #07193b;
+}
+
+
+.my-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.my-table th, .my-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.my-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.my-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.my-table tr:hover {
+  background-color: #ddd;
+}
+
+
+.input-field {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px; /* Adjust the width to your preferred size */
+
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

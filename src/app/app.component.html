@@ -1,0 +1,92 @@
+<!-- <div>
+  <input type="text" [(ngModel)]="inputData" placeholder="Enter data">
+  <button (click)="sendData()">Send</button>
+</div>
+
+<router-outlet></router-outlet> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/css/bootstrap.min.css">
+
+
+
+    <meta charset="utf-8">
+    <title>Sequenced Dataset Checker</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sequenced Dataset Checker</h1>
+    </header>
+    <main>
+
+      <div>
+        <input type="text" [(ngModel)]="inputData" placeholder="Enter DatastorageID or PIID" class="input-field">
+        <button (click)="sendData()" class="submit-button">Send</button>
+      </div>
+
+      <!-- <table id="dataset-table">
+        <thead>
+          <tr>
+            <th>IP Address</th>
+            <th>Is Sequenced?</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table> -->
+
+      <!-- <div *ngIf="successMessage" class="text text-success" id="successMessage">
+        {{successMessage}}
+    </div>
+    <div *ngIf="errorMessage" class="text text-danger" id="errorMessage">
+      {{errorMessage}}
+  </div> -->
+<br/>
+<div >
+  <table class="my-table" *ngIf="isLoggedIn ; else elseblock">
+    <thead>
+      <tr>
+        <th>DatastorageID</th>
+        <th>PIID</th>
+        <th>Estimated Coverage</th>
+        <th>Species</th>
+        <th>Ecotype</th>
+        <th>Origin Country</th>
+        <th>Origin City</th>
+        <th>Collection Year</th>
+        <th>Improvement Status</th>
+        <th>Maturity Group</th>
+        <th>Data Resource</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of successMessage">
+        <td>{{ item.DatastorageID }}</td>
+        <td>{{ item.PIID }}</td>
+        <td>{{ item.Estimatedcoverage }}</td>
+        <td>{{ item.Species }}</td>
+        <td>{{ item.Ecotype }}</td>
+        <td>{{ item.Origincountry }}</td>
+        <td>{{ item.Origincity }}</td>
+        <td>{{ item.Collectionyear }}</td>
+        <td>{{ item.Improvementstatus }}</td>
+        <td>{{ item.Maturity_group }}</td>
+        <td>{{ item.Dataresource }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<ng-template #elseblock>
+  <p>No Value is Selected</p>
+</ng-template>
+</div>
+
+
+
+    </main>
+  </body>
+</html>
+<router-outlet></router-outlet>
